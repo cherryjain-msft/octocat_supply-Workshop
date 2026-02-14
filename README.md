@@ -43,6 +43,20 @@ erDiagram
 
 ### Quick Start
 
+#### Option 1: Simple Start Scripts (Windows)
+
+Run one of these commands from the root directory:
+
+```powershell
+# PowerShell
+.\start.ps1
+
+`
+
+These scripts automatically install dependencies and start both servers!
+
+#### Option 2: Using Make
+
 1. Clone this repository
 
 2. Install dependencies:
