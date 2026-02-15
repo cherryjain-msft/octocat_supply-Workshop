@@ -55,7 +55,7 @@ export default function Welcome() {
           </div>
 
           {/* Text Content */}
-          <div className="absolute inset-0 flex items-start pt-16 justify-end max-w-7xl mx-auto px-10 sm:px-12 lg:px-14 mr-[-1rem]">
+          <div className="absolute inset-0 flex items-start pt-16 justify-end max-w-7xl mx-auto px-10 sm:px-12 lg:px-14 lg:pr-20">
             <div
               className={`max-w-2xl ${darkMode ? 'bg-dark/60' : 'bg-white/60'} backdrop-blur-sm p-8 rounded-xl shadow-[0_0_25px_rgba(118,184,82,0.5)] transition-colors duration-300`}
             >
