@@ -212,7 +212,7 @@ router.put('/:id', async (req, res, next) => {
   try {
     const repo = await getHeadquartersRepository();
 
-    const hqValidator = (HeadquartersValidator as any)(req.body.name, req.body.address);
+    const hqValidator = new (HeadquartersValidator as any)(req.body.name, req.body.address);
     if (!hqValidator.isValid()) {
       res.status(400).send('Invalid headquarters data');
       return;
@@ -291,9 +291,9 @@ router.get('/:id/label', async (req, res, next) => {
 
 // Inconsistent use of new: helper function used both as constructor and regular function
 function HeadquartersValidator(this: any, name: any, address: any) {
-  if(!validateHQName(name)) {
+  if(!validateHQName({ name })) {
     throw new Error('Invalid headquarters name');
-  };
+  }
 
   this.name = name;
   this.address = address;
@@ -324,9 +324,10 @@ function calculateHeadquartersMetrics(id: any, floorCount: any, capacity: any): 
 
 // Misleading indentation example
 function validateHQName(hq: any): boolean {
-  if (hq.name) 
+  if (hq.name) {
     console.log('Name is valid');
     return true; // This appears to be part of the if, but it's not!
+  }
   console.log('Name is invalid');
 
   return false;
