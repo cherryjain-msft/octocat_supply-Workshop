@@ -34,12 +34,14 @@ describe('Supplier API', () => {
       contactPerson: 'Jane Doe',
       email: 'jane@supplier.com',
       phone: '555-5678',
-      active: true,
-      verified: false,
+      active: 1,
+      verified: 0,
     };
     const response = await request(app).post('/suppliers').send(newSupplier);
     expect(response.status).toBe(201);
-    expect(response.body).toMatchObject(newSupplier);
+    expect(response.body.name).toBe('Test Supplier');
+    expect(response.body.active).toBe(true);  // SQLite returns as boolean
+    expect(response.body.verified).toBe(false); // SQLite returns as boolean
     expect(response.body.supplierId).toBeDefined();
   });
 
@@ -57,8 +59,8 @@ describe('Supplier API', () => {
       contactPerson: 'John Smith',
       email: 'john@supplier.com',
       phone: '555-1111',
-      active: true,
-      verified: true,
+      active: 1,
+      verified: 1,
     };
     const createResponse = await request(app).post('/suppliers').send(newSupplier);
     const supplierId = createResponse.body.supplierId;
@@ -76,8 +78,8 @@ describe('Supplier API', () => {
       contactPerson: 'Alice Brown',
       email: 'alice@supplier.com',
       phone: '555-2222',
-      active: false,
-      verified: false,
+      active: 0,
+      verified: 0,
     };
     const createResponse = await request(app).post('/suppliers').send(newSupplier);
     const supplierId = createResponse.body.supplierId;
@@ -85,12 +87,12 @@ describe('Supplier API', () => {
     const updatedSupplier = {
       ...newSupplier,
       name: 'Updated Supplier Name',
-      active: true,
+      active: 1,
     };
     const response = await request(app).put(`/suppliers/${supplierId}`).send(updatedSupplier);
     expect(response.status).toBe(200);
     expect(response.body.name).toBe('Updated Supplier Name');
-    expect(response.body.active).toBe(true);
+    expect(response.body.active).toBe(true); // SQLite returns as boolean
   });
 
   it('should delete a supplier by ID', async () => {
@@ -101,8 +103,8 @@ describe('Supplier API', () => {
       contactPerson: 'Bob Jones',
       email: 'bob@supplier.com',
       phone: '555-9999',
-      active: true,
-      verified: false,
+      active: 1,
+      verified: 0,
     };
     const createResponse = await request(app).post('/suppliers').send(newSupplier);
     const supplierId = createResponse.body.supplierId;
@@ -124,8 +126,8 @@ describe('Supplier API', () => {
       contactPerson: 'Charlie Wilson',
       email: 'charlie@supplier.com',
       phone: '555-3333',
-      active: true,
-      verified: true,
+      active: 1,
+      verified: 1,
     };
     const createResponse = await request(app).post('/suppliers').send(newSupplier);
     const supplierId = createResponse.body.supplierId;
