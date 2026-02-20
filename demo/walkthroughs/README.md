@@ -54,18 +54,6 @@ Demonstrate how Agent Skills encode specific knowledge/patterns/instructions for
 - **API Endpoint Generation**: Use the `api-endpoint` skill to add a new entity (DeliveryVehicle)
 - **Pattern Adherence**: Show how generated code follows the encapsulated skill definition
 
-### 🔒 GitHub Advanced Security (GHAS)
-
-**File:** [ghas.md](./ghas.md)
-
-Security-focused demonstrations covering:
-
-- **CodeQL & Code Scanning**: Detect vulnerabilities in existing code
-- **Autofix**: AI-powered vulnerability remediation
-- **PR Security**: Prevent vulnerable code from being merged
-- **Live Vulnerability Demos**: Interactive security testing scenarios
-- **Secret Scanning**: Detect exposed credentials and tokens
-
 ### ⚙️ GitHub Actions & CI/CD
 
 **File:** [actions.md](./actions.md)

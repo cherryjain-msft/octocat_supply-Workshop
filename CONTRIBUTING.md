@@ -26,7 +26,6 @@ Contributions to the actual application code (frontend and API) should:
 Demo narrative scripts live in the [`demo/walkthroughs/`](./demo/walkthroughs/) directory:
 
 - **[copilot.md](./demo/walkthroughs/copilot.md)** - GitHub Copilot demonstrations
-- **[ghas.md](./demo/walkthroughs/ghas.md)** - GitHub Advanced Security demonstrations
 - **[actions.md](./demo/walkthroughs/actions.md)** - GitHub Actions and CI/CD
 - **[governance.md](./demo/walkthroughs/governance.md)** - Repository governance features
 - **[issues-and-projects.md](./demo/walkthroughs/issues-and-projects.md)** - Issues and project management
