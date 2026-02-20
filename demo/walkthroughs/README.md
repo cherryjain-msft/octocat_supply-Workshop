@@ -30,23 +30,9 @@ You don't need VS Code Insiders unless demoing preview features. In Codespaces, 
 
 ## 📚 Available Walkthroughs
 
-### 🤖 GitHub Copilot & AI Features
-
-**File:** [copilot.md](./copilot.md)
-
-Comprehensive demonstrations of GitHub Copilot's capabilities including:
-
-- **Agent Mode & Vision**: Generate cart functionality using natural language and images
-- **Unit Testing**: Automated test generation and coverage improvement
-- **Custom Instructions**: Personalize Copilot for internal frameworks and standards
-- **MCP Servers**: Playwright testing and GitHub API integration
-- **Security Analysis**: Vulnerability detection and automated fixes
-- **CI/CD Generation**: Automated workflow creation with Actions and Infrastructure as Code
-- **Copilot Coding Agent**: Async task handoff and parallel experimentation
-
 ### 🛠️ Agent Skills
 
-**File:** [agent-skills.md](./skills.md)
+**File:** [agent-skills.md](./agent-skills.md)
 
 Demonstrate how Agent Skills encode specific knowledge/patterns/instructions for consistent code generation:
 
@@ -54,44 +40,16 @@ Demonstrate how Agent Skills encode specific knowledge/patterns/instructions for
 - **API Endpoint Generation**: Use the `api-endpoint` skill to add a new entity (DeliveryVehicle)
 - **Pattern Adherence**: Show how generated code follows the encapsulated skill definition
 
-### ⚙️ GitHub Actions & CI/CD
+### 🔧 Reducing Developer Toil
 
-**File:** [actions.md](./actions.md)
+**File:** [reducing-developer-toil.md](./reducing-developer-toil.md)
 
-Workflow and automation demonstrations:
-
-- **Required Workflows**: Organization-level workflow enforcement
-- **Dependency Review**: Automated security checks for dependencies
-- **Ruleset Integration**: How workflows integrate with repository governance
-
-### 🏛️ Governance & Compliance
-
-**File:** [governance.md](./governance.md)
-
-Enterprise governance features:
-
-- **Repository Rulesets**: Dynamic rule enforcement based on metadata
-- **Custom Properties**: Repository classification and automated policy application
-- **Branch Protection**: Pull request requirements and security scanning
-- **Compliance Workflows**: Required security and quality checks
-
-### 📊 Issues & Project Management
-
-**File:** [issues-and-projects.md](./issues-and-projects.md)
-
-Project planning and tracking demonstrations:
-
-- **Issue Management**: Types, dependencies, and sub-issues
-- **Project Boards**: Agile workflow visualization with custom fields
-- **Sprint Planning**: Iteration management and capacity planning
-- **Team Collaboration**: Multi-squad coordination and assignment
-- **Analytics & Insights**: Project health and progress tracking
+Hands-on workshop covering 7 labs that demonstrate how to reduce repetitive development tasks using GitHub Copilot features including custom instructions, prompt files, agent skills, and coding agents.
 
 ## 💡 Tips for Success
 
 - **Non-deterministic AI**: Copilot responses vary - be prepared to adapt
 - **Practice**: Rehearse all scenarios before live demonstrations
-- **Mix & Match**: Combine different walkthroughs based on audience needs
 
 ---
 
